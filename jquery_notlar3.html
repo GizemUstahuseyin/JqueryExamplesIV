@@ -1,0 +1,74 @@
+<html>
+<head>
+    <title>jQuery Examples 3</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#btn').click(function () {
+                $('#yazi').html("<b>Burasý Bold</b> Burasý Deðil.");
+            })
+            $('#goster').click(function () {
+                $('#yazi').show(1000);
+
+            });
+
+            $('#gizle').click(function () {
+                $('#yazi').hide(1000);
+
+            });
+            //$('#yazi').mouseenter(function () {
+            //    $('#yazi').css("background-color", "red");
+            //});
+            //$('#yazi').mouseleave(function () {
+            //    $('#yazi').css("background-color", "white");
+            //});
+            $('#yazi').hover(function () {
+                $('#yazi').css("background-color", "purple");
+            },
+                function () {
+                $('#yazi').css("background-color", "white");
+                });
+            $('#input_alani').focus(function () {
+                $('#input_alani').css("background-color", "grey");
+
+            });
+
+            $('#input_alani').blur(function () {
+                $('#input_alani').css("background-color", "white");
+            });
+
+            $('#yazi2').on({
+                mouseenter: function () {
+                    $('#yazi2').css("background-color", "lightgray");
+                },
+                mouseleave: function () {
+                    $('#yazi2').css("background-color", "lightblue");
+                },
+                click: function () {
+                    $('#yazi2').css("font-size", 42);
+                },
+                dblclick: function () {
+                    $('#yazi2').css("font-size", 22);
+                }
+            });
+            });
+    </script>
+
+</head>
+<body>
+
+    <p id="yazi">Hello World!</p>
+    <button id="btn">Ýçeriði Deðiþtir</button>
+    <button id="goster">Göster</button>
+    <button id="gizle">Gizle</button>
+
+    <p>Name: </p>
+    <input type="text" id="input_alani" />
+    
+    <p id="yazi2">Hello Programmer!</p>
+
+
+</body>
+</html>
